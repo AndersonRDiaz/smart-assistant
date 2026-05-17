@@ -1,0 +1,6 @@
+pydantic
+tiktoken
+pandas
+matplotlib
+python-dotenv
+ollama

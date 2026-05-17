@@ -1,0 +1,129 @@
+import json
+import os
+
+# lista completa de testes
+test_dataset = [
+    {
+        "texto": "A tela do meu monitor chegou trincada, preciso de ajuda agora!",
+        "tipo_esperado": "reclamacao",
+        "urgencia_esperada": "alta",
+        "palavras_chave": ["tela", "trincada", "ajuda"]
+    },
+    {
+        "texto": "Vocês entregam de sábado?",
+        "tipo_esperado": "duvida",
+        "urgencia_esperada": "baixa",
+        "palavras_chave": ["entregam", "sábado"]
+    },
+    {
+        "texto": "Melhor compra que já fiz, chegou muito rápido!",
+        "tipo_esperado": "elogio",
+        "urgencia_esperada": "baixa",
+        "palavras_chave": ["melhor", "compra", "rápido"]
+    },
+    {
+        "texto": "Deveriam vender cadeiras gamer também.",
+        "tipo_esperado": "sugestao",
+        "urgencia_esperada": "baixa",
+        "palavras_chave": ["cadeiras", "gamer", "vender"]
+    },
+    {
+        "texto": "Meu pedido está atrasado há 10 dias, resolvam isso logo.",
+        "tipo_esperado": "reclamacao",
+        "urgencia_esperada": "alta",
+        "palavras_chave": ["atrasado", "dias", "resolvam"]
+    },
+    {
+        "texto": "Como funciona a política de devolução para fones de ouvido?",
+        "tipo_esperado": "duvida",
+        "urgencia_esperada": "media",
+        "palavras_chave": ["política", "devolução", "fones"]
+    },
+    {
+        "texto": "O celular que comprei ontem não quer ligar de jeito nenhum, quero meu dinheiro de volta!",
+        "tipo_esperado": "reclamacao",
+        "urgencia_esperada": "alta",
+        "palavras_chave": ["celular", "ligar", "dinheiro"]
+    },
+    {
+        "texto": "O site é muito intuitivo e fácil de navegar, parabéns à equipe.",
+        "tipo_esperado": "elogio",
+        "urgencia_esperada": "baixa",
+        "palavras_chave": ["site", "intuitivo", "parabéns"]
+    },
+    {
+        "texto": "Vocês poderiam oferecer um programa de fidelidade com pontos para descontos nas próximas compras.",
+        "tipo_esperado": "sugestao",
+        "urgencia_esperada": "baixa",
+        "palavras_chave": ["programa", "fidelidade", "pontos"]
+    },
+    {
+        "texto": "O teclado mecânico modelo X é compatível com sistema Mac?",
+        "tipo_esperado": "duvida",
+        "urgencia_esperada": "baixa",
+        "palavras_chave": ["teclado", "compatível", "Mac"]
+    },
+    {
+        "texto": "A caixa do meu processador veio amassada, mas a peça parece intacta. Fica o aviso.",
+        "tipo_esperado": "reclamacao",
+        "urgencia_esperada": "media",
+        "palavras_chave": ["caixa", "amassada", "processador"]
+    },
+    {
+        "texto": "Posso alterar o endereço de entrega depois que o pedido já foi faturado?",
+        "tipo_esperado": "duvida",
+        "urgencia_esperada": "media",
+        "palavras_chave": ["alterar", "endereço", "faturado"]
+    },
+    {
+        "texto": "Fiquei impressionado com o cuidado na embalagem da minha placa de vídeo, muito bem protegida.",
+        "tipo_esperado": "elogio",
+        "urgencia_esperada": "baixa",
+        "palavras_chave": ["embalagem", "placa", "protegida"]
+    },
+    {
+        "texto": "Seria ótimo se vocês tivessem a opção de retirar o produto fisicamente na loja.",
+        "tipo_esperado": "sugestao",
+        "urgencia_esperada": "baixa",
+        "palavras_chave": ["retirar", "produto", "loja"]
+    },
+    {
+        "texto": "Me enviaram um cabo HDMI no lugar da memória RAM que eu comprei! Que absurdo!",
+        "tipo_esperado": "reclamacao",
+        "urgencia_esperada": "alta",
+        "palavras_chave": ["cabo", "lugar", "memória"]
+    },
+    {
+        "texto": "Quais são as formas de pagamento aceitas para compras acima de 5 mil reais?",
+        "tipo_esperado": "duvida",
+        "urgencia_esperada": "baixa",
+        "palavras_chave": ["formas", "pagamento", "compras"]
+    },
+    {
+        "texto": "O cupom de desconto de primeira compra não está aplicando no carrinho.",
+        "tipo_esperado": "reclamacao",
+        "urgencia_esperada": "media",
+        "palavras_chave": ["cupom", "desconto", "carrinho"]
+    },
+    {
+        "texto": "O suporte via chat foi espetacular, a atendente resolveu minha dúvida em dois minutos.",
+        "tipo_esperado": "elogio",
+        "urgencia_esperada": "baixa",
+        "palavras_chave": ["suporte", "chat", "resolveu"]
+    },
+    {
+        "texto": "Adicionem um filtro para buscar notebooks por geração de processador, facilitaria muito a pesquisa.",
+        "tipo_esperado": "sugestao",
+        "urgencia_esperada": "baixa",
+        "palavras_chave": ["filtro", "buscar", "processador"]
+    },
+    {
+        "texto": "Preciso da segunda via da nota fiscal com urgência máxima para a contabilidade da minha empresa fechar o mês.",
+        "tipo_esperado": "duvida",
+        "urgencia_esperada": "alta",
+        "palavras_chave": ["segunda", "via", "urgência"]
+    }
+]
+
+
+print(f"Arquivo {caminho_arquivo} criado e salvo com sucesso!")
