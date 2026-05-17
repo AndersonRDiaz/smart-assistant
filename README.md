@@ -5,7 +5,7 @@ Por esse motivo, o ambiente oficial de homologação, execução e teste deste p
 Este repositório cumpre o papel estrito de fornecer a referência estrutural, modular e arquitetural definitiva do software, demonstrando as boas práticas de Engenharia de Software exigidas no Checkpoint (separação de escopos, schemas de validação, gerenciador de prompts e guardrails).
 
 # Smart Assistant "ANA" — E-commerce TechStore 🚀
-> **FIAP — Checkpoint 03 (rompt and Artificial Intelligence )**
+> **FIAP — Checkpoint 03 (Prompt and Artificial Intelligence )**
 
 Este é um projeto modular em Python que implementa um agente conversacional avançado de Customer Experience para o domínio de e-commerce de tecnologia (**TechStore**). O sistema conta com um pipeline de 3 etapas com lógica condicional, validação estruturada com Pydantic e um sistema defensivo de segurança (Guardrails) dividido em 3 camadas.
 
