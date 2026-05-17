@@ -1,5 +1,5 @@
 Nota sobre a Infraestrutura e Modelo (gpt-oss:120b)
-Conforme alinhado previamente com a banca/professor, devido aos altos requisitos computacionais e ao tamanho do modelo gpt-oss:120b, 
+Conforme alinhado previamente com o professor, devido aos altos requisitos computacionais e ao tamanho do modelo gpt-oss:120b, 
 Por esse motivo, o ambiente oficial de homologação, execução e teste deste projeto foi o Google Colab, que se conecta remotamente ao motor de inferência da API.
 
 Este repositório cumpre o papel estrito de fornecer a referência estrutural, modular e arquitetural definitiva do software, demonstrando as boas práticas de Engenharia de Software exigidas no Checkpoint (separação de escopos, schemas de validação, gerenciador de prompts e guardrails).
